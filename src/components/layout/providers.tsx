@@ -5,8 +5,8 @@ import { ThemeProvider } from './theme-provider';
 
 export function Providers({ children }: { children: ReactNode }) {
   return (
-    <ThemeProvider>
-      <NuqsAdapter>{children}</NuqsAdapter>
-    </ThemeProvider>
+    <NuqsAdapter>
+      <ThemeProvider>{children}</ThemeProvider>
+    </NuqsAdapter>
   );
 }
