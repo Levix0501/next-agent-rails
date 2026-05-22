@@ -14,6 +14,16 @@ A Next.js 16 project using the App Router, with React 19, Tailwind CSS v4, and T
   CLI (e.g. `bunx shadcn@latest add <name>` to add a shadcn component), use that CLI.
   Don't hand-write config files or paste source code to replicate what the CLI generates.
 
+## State
+
+- **URL / search-param state → `nuqs`.** Use `useQueryState` / `useQueryStates` for any
+  state that belongs in the URL (filters, tabs, pagination, dialog open flags). Don't
+  hand-roll `useState` + `URLSearchParams` + `router.replace`. `NuqsAdapter` is already
+  wired in `src/components/layout/providers.tsx`.
+- **Cross-component client state → `zustand`.** Reach for a zustand store before
+  introducing a new React Context. Keep stores small and per-feature
+  (`src/features/<feature>/store.ts`).
+
 ## On-demand References
 
 Material pulled in only when the task matches.
