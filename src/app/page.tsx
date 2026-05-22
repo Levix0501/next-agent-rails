@@ -1,5 +1,6 @@
 import { FeaturesGrid } from './_components/features-grid';
 import { Hero } from './_components/hero';
+import { SkillsGrid } from './_components/skills-grid';
 import { SpeedTable } from './_components/speed-table';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <SpeedTable />
         <FeaturesGrid />
+        <SkillsGrid />
       </div>
     </main>
   );
