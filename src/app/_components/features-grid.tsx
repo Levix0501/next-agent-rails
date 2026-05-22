@@ -29,7 +29,7 @@ export function FeaturesGrid() {
     >
       <div className='mx-auto max-w-5xl'>
         <div className='mb-3 font-mono text-[11px] tracking-wider text-[#98f590]/85'>
-          // SECTION 02 — WHAT&apos;S ON THE RAILS
+          {`// SECTION 02 — WHAT'S ON THE RAILS`}
         </div>
         <h2 className='text-2xl font-semibold tracking-tight text-white md:text-[28px]'>
           Guardrails, not handcuffs.

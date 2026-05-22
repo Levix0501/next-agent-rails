@@ -18,7 +18,7 @@ export function SkillsGrid() {
     >
       <div className='mx-auto max-w-5xl'>
         <div className='mb-3 font-mono text-[11px] tracking-wider text-[#98f590]/85'>
-          // SECTION 03 — SKILLS PREINSTALLED
+          {'// SECTION 03 — SKILLS PREINSTALLED'}
         </div>
         <h2 className='text-2xl font-semibold tracking-tight text-white md:text-[28px]'>
           9 skills, locked &amp; ready.
