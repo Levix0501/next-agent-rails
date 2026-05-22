@@ -25,28 +25,25 @@ export function FeaturesGrid() {
   return (
     <section
       id='rails'
-      className='scroll-mt-16 border-b border-white/[0.06] bg-[#0a0a0a] px-7 py-14 md:py-16'
+      className='border-border bg-background scroll-mt-16 border-b px-7 py-14 md:py-16'
     >
       <div className='mx-auto max-w-5xl'>
-        <div className='mb-3 font-mono text-[11px] tracking-wider text-[#98f590]/85'>
+        <div className='text-brand/85 mb-3 font-mono text-[11px] tracking-wider'>
           {`// SECTION 02 — WHAT'S ON THE RAILS`}
         </div>
-        <h2 className='text-2xl font-semibold tracking-tight text-white md:text-[28px]'>
+        <h2 className='text-foreground text-2xl font-semibold tracking-tight md:text-[28px]'>
           Guardrails, not handcuffs.
         </h2>
-        <p className='mt-2 max-w-xl text-sm text-white/60 md:text-base'>
+        <p className='text-muted-foreground mt-2 max-w-xl text-sm md:text-base'>
           Conventions that keep agents productive without locking down design.
         </p>
 
         <div className='mt-7 grid grid-cols-1 gap-3.5 md:grid-cols-2'>
           {FEATURES.map((f) => (
-            <div
-              key={f.num}
-              className='rounded-[10px] border border-white/[0.07] bg-white/[0.015] p-5'
-            >
-              <div className='font-mono text-[11px] text-[#98f590]/70'>{f.num}</div>
-              <h3 className='mt-1.5 text-[15px] font-semibold text-white'>{f.title}</h3>
-              <p className='mt-1.5 text-[13px] leading-relaxed text-white/65'>{f.body}</p>
+            <div key={f.num} className='border-border bg-card rounded-[10px] border p-5'>
+              <div className='text-brand/70 font-mono text-[11px]'>{f.num}</div>
+              <h3 className='text-foreground mt-1.5 text-[15px] font-semibold'>{f.title}</h3>
+              <p className='text-muted-foreground mt-1.5 text-[13px] leading-relaxed'>{f.body}</p>
             </div>
           ))}
         </div>

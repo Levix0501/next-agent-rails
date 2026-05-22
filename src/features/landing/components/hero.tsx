@@ -8,17 +8,17 @@ const HERO_ASCII = ` _ __   ___  _ __   __ _  __ _  ___ _ __ | |_     _ __ __ _(
 
 export function Hero() {
   return (
-    <section className='border-b border-white/[0.06] bg-[#0a0a0a] px-7 pt-16 pb-14 md:pt-24'>
+    <section className='border-border bg-background border-b px-7 pt-16 pb-14 md:pt-24'>
       <div className='mx-auto max-w-5xl'>
-        <span className='inline-flex items-center gap-2 rounded-full border border-[#98f590]/20 bg-[#98f590]/[0.04] px-2.5 py-1 font-mono text-[11px] tracking-wider text-[#98f590]'>
+        <span className='border-brand/20 bg-brand/5 text-brand inline-flex items-center gap-2 rounded-full border px-2.5 py-1 font-mono text-[11px] tracking-wider'>
           ▸ rails for agents
         </span>
 
-        <h1 className='mt-5 max-w-3xl text-4xl leading-[1.05] font-semibold tracking-tight text-white md:text-5xl'>
-          Rails for AI agents <span className='text-white/50'>building with Next.js.</span>
+        <h1 className='text-foreground mt-5 max-w-3xl text-4xl leading-[1.05] font-semibold tracking-tight md:text-5xl'>
+          Rails for AI agents <span className='text-muted-foreground'>building with Next.js.</span>
         </h1>
 
-        <p className='mt-4 max-w-xl text-base leading-relaxed text-white/60 md:text-lg'>
+        <p className='text-muted-foreground mt-4 max-w-xl text-base leading-relaxed md:text-lg'>
           A starter that keeps agents on a controlled, conventional track. Native toolchain.
           Server-first. Preinstalled skills. Modern baseline.
         </p>
@@ -44,7 +44,7 @@ export function Hero() {
         <div className='mt-6 flex flex-wrap gap-2.5 text-sm'>
           <a
             href='#start'
-            className='rounded-md bg-white px-4 py-2.5 font-medium text-[#0a0a0a] transition-colors hover:bg-white/90'
+            className='bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2.5 font-medium transition-colors'
           >
             Get started
           </a>
@@ -52,7 +52,7 @@ export function Hero() {
             href='https://github.com/levix0501/next-agent-rails'
             target='_blank'
             rel='noopener noreferrer'
-            className='rounded-md border border-white/15 px-4 py-2.5 text-white transition-colors hover:bg-white/[0.04]'
+            className='border-border text-foreground hover:bg-accent hover:text-accent-foreground rounded-md border px-4 py-2.5 transition-colors'
           >
             ⭐ View on GitHub
           </a>
