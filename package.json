@@ -2,10 +2,19 @@
   "name": "next-agent-rails",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Levix0501",
+    "url": "https://github.com/levix0501"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix && bun format",
+    "lint:strict": "oxlint --deny-warnings",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -17,6 +26,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

@@ -10,6 +10,9 @@
   `'use client'` only when you need hooks, event handlers, or browser APIs — and put it
   on the smallest, leaf-most component. Fetch data on the server and pass it down as
   serializable props; never make a parent a Client Component just to give a child interactivity.
+- **Official CLI first.** Whenever a tool can be installed or scaffolded via its official
+  CLI (e.g. `shadcn`, `create-next-app`, a package's own `init` command), use that CLI.
+  Don't hand-write config files or paste source code to replicate what the CLI generates.
 
 ## On-demand References
 

@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "semi": true,
+  "useTabs": false,
+  "trailingComma": "none",
+  "jsxSingleQuote": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "endOfLine": "lf",
+  "sortImports": true,
+  "sortPackageJson": true,
+  "sortTailwindcss": true,
+  "ignorePatterns": [
+    ".agents/**",
+    ".claude/**",
+    ".next/**",
+    "out/**",
+    "build/**"
+  ],
+  "overrides": [
+    {
+      "files": ["*.md", "*.mdc"],
+      "options": {
+        "proseWrap": "preserve"
+      }
+    }
+  ]
+}
