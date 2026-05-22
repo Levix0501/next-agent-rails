@@ -1,3 +1,4 @@
+import { FeaturesGrid } from './_components/features-grid';
 import { Hero } from './_components/hero';
 import { SpeedTable } from './_components/speed-table';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <div id='main'>
         <Hero />
         <SpeedTable />
+        <FeaturesGrid />
       </div>
     </main>
   );
