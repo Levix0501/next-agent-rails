@@ -2,6 +2,7 @@ import { FeaturesGrid } from './_components/features-grid';
 import { Footer } from './_components/footer';
 import { GetStarted } from './_components/get-started';
 import { Hero } from './_components/hero';
+import { SiteNav } from './_components/site-nav';
 import { SkillsGrid } from './_components/skills-grid';
 import { SpeedTable } from './_components/speed-table';
 
@@ -14,6 +15,7 @@ export default function Home() {
       >
         Skip to content
       </a>
+      <SiteNav />
       <div id='main'>
         <Hero />
         <SpeedTable />
