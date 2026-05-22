@@ -1,4 +1,5 @@
 import { FeaturesGrid } from './_components/features-grid';
+import { GetStarted } from './_components/get-started';
 import { Hero } from './_components/hero';
 import { SkillsGrid } from './_components/skills-grid';
 import { SpeedTable } from './_components/speed-table';
@@ -17,6 +18,7 @@ export default function Home() {
         <SpeedTable />
         <FeaturesGrid />
         <SkillsGrid />
+        <GetStarted />
       </div>
     </main>
   );
