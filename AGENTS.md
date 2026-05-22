@@ -1,6 +1,6 @@
 # AGENTS.md
 
-A Next.js 16 project using the App Router, with React 19, Tailwind CSS v4, and TypeScript.
+**next-agent-rails** — a Next.js 16 project using the App Router, with React 19, Tailwind CSS v4, and TypeScript.
 
 ## Key Constraints
 
