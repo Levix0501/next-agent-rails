@@ -2,8 +2,7 @@ const SKILLS = [
   { name: 'next-best-practices', source: 'vercel-labs' },
   { name: 'vercel-react-best-practices', source: 'vercel-labs' },
   { name: 'vercel-composition-patterns', source: 'vercel-labs' },
-  { name: 'shadcn-component-discovery', source: 'mattbx' },
-  { name: 'shadcn-component-review', source: 'mattbx' },
+  { name: 'shadcn', source: 'shadcn-ui' },
   { name: 'frontend-design', source: 'anthropics' },
   { name: 'web-design-guidelines', source: 'vercel-labs' },
   { name: 'find-skills', source: 'vercel-labs' },
@@ -21,7 +20,7 @@ export function SkillsGrid() {
           {'// SECTION 03 — SKILLS PREINSTALLED'}
         </div>
         <h2 className='text-2xl font-semibold tracking-tight text-white md:text-[28px]'>
-          9 skills, locked &amp; ready.
+          {`${SKILLS.length} skills, locked & ready.`}
         </h2>
         <p className='mt-2 max-w-xl text-sm text-white/60 md:text-base'>
           Open the project. Your agent already knows how to do these things.
