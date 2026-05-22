@@ -1,4 +1,5 @@
 import { Hero } from './_components/hero';
+import { SpeedTable } from './_components/speed-table';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </a>
       <div id='main'>
         <Hero />
+        <SpeedTable />
       </div>
     </main>
   );
