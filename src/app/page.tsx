@@ -1,3 +1,5 @@
+import { Hero } from './_components/hero';
+
 export default function Home() {
   return (
     <main className='flex flex-1 flex-col bg-[#0a0a0a] text-white'>
@@ -7,7 +9,9 @@ export default function Home() {
       >
         Skip to content
       </a>
-      <div id='main' />
+      <div id='main'>
+        <Hero />
+      </div>
     </main>
   );
 }
