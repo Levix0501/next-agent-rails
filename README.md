@@ -21,14 +21,14 @@ Built on Next.js 16 (App Router), React 19, Tailwind CSS v4, and TypeScript.
 
 ## Why it's fast
 
-| Stage               | Tool                            | Replaces            | Language |
-| ------------------- | ------------------------------- | ------------------- | -------- |
-| Install / run       | `bun`                           | npm / node          | Zig      |
-| Lint                | `oxlint`                        | ESLint              | Rust     |
-| Format              | `oxfmt`                         | Prettier            | Rust     |
-| Compile JS/TS       | SWC (in Next.js)                | Babel               | Rust     |
-| Dev server / bundle | Turbopack (Next.js 16 default)  | Webpack             | Rust     |
-| CSS engine          | Tailwind v4 Oxide               | Tailwind v3 PostCSS | Rust     |
+| Stage               | Tool                           | Replaces            | Language |
+| ------------------- | ------------------------------ | ------------------- | -------- |
+| Install / run       | `bun`                          | npm / node          | Zig      |
+| Lint                | `oxlint`                       | ESLint              | Rust     |
+| Format              | `oxfmt`                        | Prettier            | Rust     |
+| Compile JS/TS       | SWC (in Next.js)               | Babel               | Rust     |
+| Dev server / bundle | Turbopack (Next.js 16 default) | Webpack             | Rust     |
+| CSS engine          | Tailwind v4 Oxide              | Tailwind v3 PostCSS | Rust     |
 
 Real-world ballparks: `bun install` ~25× npm, `oxlint` ~50–100× ESLint,
 `oxfmt` ~10–20× Prettier, Turbopack ~10× Webpack cold start.

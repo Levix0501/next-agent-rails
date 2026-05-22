@@ -16,14 +16,7 @@
     "browser": true,
     "node": true
   },
-  "ignorePatterns": [
-    ".agents/**",
-    ".claude/**",
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts"
-  ],
+  "ignorePatterns": [".agents/**", ".claude/**", ".next/**", "out/**", "build/**", "next-env.d.ts"],
   "settings": {
     "jsx-a11y": {
       "components": {

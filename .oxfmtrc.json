@@ -12,13 +12,7 @@
   "sortImports": true,
   "sortPackageJson": true,
   "sortTailwindcss": true,
-  "ignorePatterns": [
-    ".agents/**",
-    ".claude/**",
-    ".next/**",
-    "out/**",
-    "build/**"
-  ],
+  "ignorePatterns": [".agents/**", ".claude/**", ".next/**", "out/**", "build/**"],
   "overrides": [
     {
       "files": ["*.md", "*.mdc"],
