@@ -1,4 +1,5 @@
 import { FeaturesGrid } from './_components/features-grid';
+import { Footer } from './_components/footer';
 import { GetStarted } from './_components/get-started';
 import { Hero } from './_components/hero';
 import { SkillsGrid } from './_components/skills-grid';
@@ -20,6 +21,7 @@ export default function Home() {
         <SkillsGrid />
         <GetStarted />
       </div>
+      <Footer />
     </main>
   );
 }
