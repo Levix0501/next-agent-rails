@@ -128,3 +128,24 @@
     @apply font-sans;
   }
 }
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  vertical-align: text-bottom;
+  background: #c0f5b0;
+  margin-left: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .terminal-cursor {
+    animation: blink 1s steps(2) infinite;
+  }
+}
