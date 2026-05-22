@@ -7,7 +7,7 @@ export function GetStarted() {
       className='border-border bg-background scroll-mt-16 border-b px-7 py-14 md:py-16'
     >
       <div className='mx-auto max-w-5xl'>
-        <div className='text-brand/85 mb-3 font-mono text-[11px] tracking-wider'>
+        <div className='mb-3 font-mono text-[11px] tracking-wider text-[#15803d]/85 dark:text-[#98f590]/85'>
           {'// SECTION 04 — GET STARTED'}
         </div>
         <h2 className='text-foreground text-2xl font-semibold tracking-tight md:text-[28px]'>

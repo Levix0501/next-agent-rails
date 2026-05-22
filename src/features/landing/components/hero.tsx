@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section className='border-border bg-background border-b px-7 pt-16 pb-14 md:pt-24'>
       <div className='mx-auto max-w-5xl'>
-        <span className='border-brand/20 bg-brand/5 text-brand inline-flex items-center gap-2 rounded-full border px-2.5 py-1 font-mono text-[11px] tracking-wider'>
+        <span className='inline-flex items-center gap-2 rounded-full border border-[#15803d]/30 bg-[#15803d]/5 px-2.5 py-1 font-mono text-[11px] tracking-wider text-[#15803d] dark:border-[#98f590]/20 dark:bg-[#98f590]/[0.04] dark:text-[#98f590]'>
           ▸ rails for agents
         </span>
 

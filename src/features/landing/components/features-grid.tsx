@@ -28,7 +28,7 @@ export function FeaturesGrid() {
       className='border-border bg-background scroll-mt-16 border-b px-7 py-14 md:py-16'
     >
       <div className='mx-auto max-w-5xl'>
-        <div className='text-brand/85 mb-3 font-mono text-[11px] tracking-wider'>
+        <div className='mb-3 font-mono text-[11px] tracking-wider text-[#15803d]/85 dark:text-[#98f590]/85'>
           {`// SECTION 02 — WHAT'S ON THE RAILS`}
         </div>
         <h2 className='text-foreground text-2xl font-semibold tracking-tight md:text-[28px]'>
@@ -41,7 +41,9 @@ export function FeaturesGrid() {
         <div className='mt-7 grid grid-cols-1 gap-3.5 md:grid-cols-2'>
           {FEATURES.map((f) => (
             <div key={f.num} className='border-border bg-card rounded-[10px] border p-5'>
-              <div className='text-brand/70 font-mono text-[11px]'>{f.num}</div>
+              <div className='font-mono text-[11px] text-[#15803d]/80 dark:text-[#98f590]/70'>
+                {f.num}
+              </div>
               <h3 className='text-foreground mt-1.5 text-[15px] font-semibold'>{f.title}</h3>
               <p className='text-muted-foreground mt-1.5 text-[13px] leading-relaxed'>{f.body}</p>
             </div>

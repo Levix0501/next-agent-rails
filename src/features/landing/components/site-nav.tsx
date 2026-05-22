@@ -11,7 +11,10 @@ export function SiteNav() {
   return (
     <nav className='border-border bg-background/70 sticky top-0 z-40 flex items-center justify-between border-b px-7 py-3.5 text-sm backdrop-blur'>
       <a href='#main' className='text-foreground flex items-center gap-2 font-medium'>
-        <span aria-hidden='true' className='bg-brand h-1.5 w-1.5 rounded-full' />
+        <span
+          aria-hidden='true'
+          className='h-1.5 w-1.5 rounded-full bg-[#15803d] dark:bg-[#98f590]'
+        />
         next-agent-rails
       </a>
       <div className='text-muted-foreground flex items-center gap-3'>
