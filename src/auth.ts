@@ -31,14 +31,16 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.id = (user as { id?: string }).id;
-        token.backendAccessToken = (user as { backendAccessToken?: string }).backendAccessToken;
+        token.id = user.id;
+        token.backendAccessToken = user.backendAccessToken;
       }
       return token;
     },
     async session({ session, token }) {
-      if (session.user && token.id) session.user.id = token.id;
-      if (session.user) session.user.backendAccessToken = token.backendAccessToken;
+      if (session.user) {
+        if (token.id) session.user.id = token.id;
+        session.user.backendAccessToken = token.backendAccessToken;
+      }
       return session;
     },
     authorized({ auth, request }) {
