@@ -1,3 +1,6 @@
+import Link from 'next/link';
+
+import { auth } from '@/auth';
 import { ThemeToggle } from '@/components/layout/theme-toggle';
 
 const LINKS = [
@@ -7,7 +10,8 @@ const LINKS = [
   { href: '#start', label: 'Start' }
 ] as const;
 
-export function SiteNav() {
+export async function SiteNav() {
+  const session = await auth();
   return (
     <nav className='border-border bg-background/70 sticky top-0 z-40 flex items-center justify-between border-b px-7 py-3.5 text-sm backdrop-blur'>
       <a href='#main' className='text-foreground flex items-center gap-2 font-medium'>
@@ -25,6 +29,15 @@ export function SiteNav() {
             </a>
           ))}
         </div>
+        {session?.user ? (
+          <Link href='/dashboard' className='hover:text-foreground transition-colors'>
+            Dashboard
+          </Link>
+        ) : (
+          <Link href='/login' className='hover:text-foreground transition-colors'>
+            Sign in
+          </Link>
+        )}
         <a
           href='https://github.com/levix0501/next-agent-rails'
           target='_blank'
