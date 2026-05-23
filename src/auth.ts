@@ -4,13 +4,7 @@ import Credentials from 'next-auth/providers/credentials';
 import { verifyDemoUser } from '@/features/auth/lib/demo-users';
 import '@/auth.types';
 
-export const {
-  handlers: { GET, POST },
-  handlers,
-  signIn,
-  signOut,
-  auth
-} = NextAuth({
+export const { handlers, signIn, signOut, auth } = NextAuth({
   session: { strategy: 'jwt' },
   pages: { signIn: '/login' },
   providers: [
