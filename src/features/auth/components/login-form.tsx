@@ -13,17 +13,23 @@ export function LoginForm() {
 
   async function action(formData: FormData) {
     setPending(true);
-    const res = await signIn('credentials', {
-      email: formData.get('email'),
-      password: formData.get('password'),
-      redirect: false
-    });
-    setPending(false);
-    if (!res || res.error) {
-      toast.error('Email or password is incorrect');
-      return;
+    try {
+      const res = await signIn('credentials', {
+        email: formData.get('email'),
+        password: formData.get('password'),
+        redirect: false
+      });
+      if (!res || res.error) {
+        toast.error('Email or password is incorrect');
+        return;
+      }
+      const from = searchParams.get('from');
+      const destination =
+        from && from.startsWith('/') && !from.startsWith('//') ? from : '/dashboard';
+      window.location.href = destination;
+    } finally {
+      setPending(false);
     }
-    window.location.href = searchParams.get('from') ?? '/dashboard';
   }
 
   return (
