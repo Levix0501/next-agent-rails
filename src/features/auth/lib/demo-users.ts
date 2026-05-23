@@ -21,9 +21,10 @@ export type AuthorizedUser = {
   backendAccessToken: string;
 };
 
-export async function verifyDemoUser(
-  credentials: Partial<Record<string, unknown>>
-): Promise<AuthorizedUser | null> {
+export async function verifyDemoUser(credentials: {
+  email?: unknown;
+  password?: unknown;
+}): Promise<AuthorizedUser | null> {
   const email = String(credentials.email ?? '');
   const password = String(credentials.password ?? '');
   const user = USERS.find((u) => u.email === email && u.password === password);
