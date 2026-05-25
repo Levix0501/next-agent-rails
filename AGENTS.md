@@ -10,6 +10,12 @@ A Next.js 16 project using the App Router, with React 19, Tailwind CSS v4, and T
   `'use client'` only when you need hooks, event handlers, or browser APIs — and put it
   on the smallest, leaf-most component. Fetch data on the server and pass it down as
   serializable props; never make a parent a Client Component just to give a child interactivity.
+- **Render as statically as possible.** Climb this ladder only when a real constraint
+  forces the next rung: **Static → SSG → ISR (`cacheLife` / `cacheTag`) → Static +
+  client-side fetch → PPR (`cacheComponents` + `<Suspense>`) → SSR**. A single
+  `cookies()` / `headers()` / `auth()` call drags the whole route down to SSR — isolate
+  the dynamic bit with `<Suspense>` (PPR) or push it into a client component, don't let
+  it bleed into the rest of the page.
 - **Official CLI first.** Whenever a tool can be installed or scaffolded via its official
   CLI (e.g. `bunx shadcn@latest add <name>` to add a shadcn component), use that CLI.
   Don't hand-write config files or paste source code to replicate what the CLI generates.
