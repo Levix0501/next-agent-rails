@@ -1,7 +1,8 @@
-import { FeaturesGrid } from '@/features/landing/components/features-grid';
+import { CuratedStack } from '@/features/landing/components/curated-stack';
 import { Footer } from '@/features/landing/components/footer';
 import { GetStarted } from '@/features/landing/components/get-started';
 import { Hero } from '@/features/landing/components/hero';
+import { OnTheRails } from '@/features/landing/components/on-the-rails';
 import { SiteNav } from '@/features/landing/components/site-nav';
 import { SkillsGrid } from '@/features/landing/components/skills-grid';
 import { SpeedTable } from '@/features/landing/components/speed-table';
@@ -18,10 +19,11 @@ export default function Home() {
       <SiteNav />
       <div id='main'>
         <Hero />
-        <SpeedTable />
-        <FeaturesGrid />
-        <SkillsGrid />
         <GetStarted />
+        <OnTheRails />
+        <CuratedStack />
+        <SkillsGrid />
+        <SpeedTable />
       </div>
       <Footer />
     </main>

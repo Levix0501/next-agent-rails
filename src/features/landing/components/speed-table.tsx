@@ -15,7 +15,7 @@ export function SpeedTable() {
     >
       <div className='mx-auto max-w-5xl'>
         <div className='mb-3 font-mono text-[11px] tracking-wider text-[#15803d]/85 dark:text-[#98f590]/85'>
-          {`// SECTION 01 — WHY IT'S FAST`}
+          {`// SECTION 05 — WHY IT'S FAST`}
         </div>
         <h2 className='text-foreground text-2xl font-semibold tracking-tight md:text-[28px]'>
           No JavaScript on the hot path.

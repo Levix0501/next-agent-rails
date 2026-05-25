@@ -4,10 +4,10 @@ import { auth } from '@/auth';
 import { ThemeToggle } from '@/components/layout/theme-toggle';
 
 const LINKS = [
-  { href: '#fast', label: 'Why fast' },
   { href: '#rails', label: 'Rails' },
+  { href: '#stack', label: 'Stack' },
   { href: '#skills', label: 'Skills' },
-  { href: '#start', label: 'Start' }
+  { href: '#fast', label: 'Fast' }
 ] as const;
 
 export async function SiteNav() {

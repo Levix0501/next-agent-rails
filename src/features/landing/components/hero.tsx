@@ -19,21 +19,18 @@ export function Hero() {
         </h1>
 
         <p className='text-muted-foreground mt-4 max-w-xl text-base leading-relaxed md:text-lg'>
-          A starter that keeps agents on a controlled, conventional track. Native toolchain.
-          Server-first. Preinstalled skills. Modern baseline.
+          Let agents ship features fast — on rails that keep your architecture and directory
+          structure under control. Fixed structure, enforced conventions, curated libraries,
+          preinstalled skills.
         </p>
 
         <TerminalWindow title='~/ — bash' className='mt-7 max-w-2xl'>
           <pre aria-hidden='true' className='text-[10px] leading-tight text-[#98f590]'>
             {HERO_ASCII}
           </pre>
-          <p className='mt-4 text-[#5a7a55]'># clone the starter</p>
+          <p className='mt-4 text-[#5a7a55]'># get started in seconds</p>
           <p>
             <span className='text-[#6ee7ff]'>$</span> bunx degit levix0501/next-agent-rails my-app
-          </p>
-          <p>
-            <span className='text-[#6ee7ff]'>$</span>
-            {' cd my-app && bun install'}
           </p>
           <p>
             <span className='text-[#6ee7ff]'>$</span> bun dev
