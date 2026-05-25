@@ -26,7 +26,6 @@ A Next.js 16 project using the App Router, with React 19, Tailwind CSS v4, and T
 - **Cross-component client state → `zustand`.** Reach for a zustand store before
   introducing a new React Context. Keep stores small and per-feature
   (`src/features/<feature>/store.ts`).
-
-## On-demand References
-
-Material pulled in only when the task matches.
+- **Client-side data fetching → `@tanstack/react-query`.** Hooks live in
+  `src/features/<feature>/api/queries.ts` (`useXxxQuery`) and `mutations.ts`
+  (`useXxxMutation`).Don't hand-roll `useEffect` + `fetch` + `useState(loading)`.
