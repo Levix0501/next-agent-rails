@@ -13,7 +13,7 @@ import { Field, FieldDescription, FieldError, FieldGroup, FieldLabel } from '@/c
 import { Input } from '@/components/ui/input';
 
 const loginSchema = z.object({
-  email: z.email('Enter a valid email address'),
+  username: z.string().min(1, 'Username is required'),
   password: z.string().min(1, 'Password is required')
 });
 
@@ -27,23 +27,29 @@ export function LoginForm() {
     formState: { errors, isSubmitting }
   } = useForm<LoginValues>({
     resolver: zodResolver(loginSchema),
-    defaultValues: { email: '', password: '' }
+    defaultValues: { username: '', password: '' }
   });
 
   async function onSubmit(values: LoginValues) {
-    const res = await signIn('credentials', {
-      email: values.email,
-      password: values.password,
-      redirect: false
-    });
-    if (!res || res.error) {
-      toast.error('Email or password is incorrect');
-      return;
+    try {
+      const res = await signIn('credentials', {
+        username: values.username,
+        password: values.password,
+        redirect: false
+      });
+      if (!res || res.error) {
+        toast.error('Username or password is incorrect');
+        return;
+      }
+      const callbackUrl = searchParams.get('callbackUrl');
+      const destination =
+        callbackUrl && callbackUrl.startsWith('/') && !callbackUrl.startsWith('//')
+          ? callbackUrl
+          : '/dashboard';
+      window.location.href = destination;
+    } catch {
+      toast.error('Something went wrong. Please try again.');
     }
-    const from = searchParams.get('from');
-    const destination =
-      from && from.startsWith('/') && !from.startsWith('//') ? from : '/dashboard';
-    window.location.href = destination;
   }
 
   return (
@@ -51,22 +57,22 @@ export function LoginForm() {
       <Card>
         <CardHeader>
           <CardTitle>Login to your account</CardTitle>
-          <CardDescription>Enter your email below to login to your account</CardDescription>
+          <CardDescription>Enter your username below to login to your account</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)}>
             <FieldGroup>
-              <Field data-invalid={!!errors.email}>
-                <FieldLabel htmlFor='email'>Email</FieldLabel>
+              <Field data-invalid={!!errors.username}>
+                <FieldLabel htmlFor='username'>Username</FieldLabel>
                 <Input
-                  id='email'
-                  type='email'
-                  placeholder='demo@example.com'
-                  autoComplete='email'
-                  aria-invalid={!!errors.email}
-                  {...register('email')}
+                  id='username'
+                  type='text'
+                  placeholder='demo'
+                  autoComplete='username'
+                  aria-invalid={!!errors.username}
+                  {...register('username')}
                 />
-                <FieldError errors={[errors.email]} />
+                <FieldError errors={[errors.username]} />
               </Field>
               <Field data-invalid={!!errors.password}>
                 <div className='flex items-center'>

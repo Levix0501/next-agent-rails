@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 
+import { Analytics } from '@/components/layout/analytics';
 import { Providers } from '@/components/layout/providers';
 
 import '@/styles/globals.css';
@@ -45,6 +46,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

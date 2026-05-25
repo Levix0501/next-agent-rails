@@ -10,7 +10,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Credentials({
       credentials: {
-        email: { label: 'Email', type: 'email' },
+        username: { label: 'Username', type: 'text' },
         password: { label: 'Password', type: 'password' }
       },
       authorize: async (credentials) => {
@@ -18,7 +18,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         //   const res = await fetch(`${process.env.BACKEND_URL}/login`, {
         //     method: 'POST',
         //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ email: credentials.email, password: credentials.password }),
+        //     body: JSON.stringify({ username: credentials.username, password: credentials.password }),
         //   });
         //   if (!res.ok) return null;
         //   const { user, token } = await res.json();
@@ -48,7 +48,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       const path = request.nextUrl.pathname;
       if (path.startsWith('/dashboard') && !isLoggedIn) {
         const url = new URL('/login', request.nextUrl.origin);
-        url.searchParams.set('from', path);
+        url.searchParams.set('callbackUrl', path);
         return Response.redirect(url);
       }
       if (path === '/login' && isLoggedIn) {
