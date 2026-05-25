@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 import { auth } from '@/auth';
 import { ThemeToggle } from '@/components/layout/theme-toggle';
@@ -10,8 +11,7 @@ const LINKS = [
   { href: '#fast', label: 'Fast' }
 ] as const;
 
-export async function SiteNav() {
-  const session = await auth();
+export function SiteNav() {
   return (
     <nav className='border-border bg-background/70 sticky top-0 z-40 flex items-center justify-between border-b px-7 py-3.5 text-sm backdrop-blur'>
       <a href='#main' className='text-foreground flex items-center gap-2 font-medium'>
@@ -29,15 +29,9 @@ export async function SiteNav() {
             </a>
           ))}
         </div>
-        {session?.user ? (
-          <Link href='/dashboard' className='hover:text-foreground transition-colors'>
-            Dashboard
-          </Link>
-        ) : (
-          <Link href='/login' className='hover:text-foreground transition-colors'>
-            Sign in
-          </Link>
-        )}
+        <Suspense fallback={<AuthLinkFallback />}>
+          <AuthLink />
+        </Suspense>
         <a
           href='https://github.com/levix0501/next-agent-rails'
           target='_blank'
@@ -50,4 +44,21 @@ export async function SiteNav() {
       </div>
     </nav>
   );
+}
+
+async function AuthLink() {
+  const session = await auth();
+  return session?.user ? (
+    <Link href='/dashboard' className='hover:text-foreground transition-colors'>
+      Dashboard
+    </Link>
+  ) : (
+    <Link href='/login' className='hover:text-foreground transition-colors'>
+      Sign in
+    </Link>
+  );
+}
+
+function AuthLinkFallback() {
+  return <span aria-hidden='true' className='bg-muted h-5 w-14 animate-pulse rounded' />;
 }
