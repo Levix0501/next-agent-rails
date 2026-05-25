@@ -1,7 +1,7 @@
 export type StatCard = {
   label: string;
-  value: string; // 已格式化的展示字符串,如 "$1,284,300"
-  deltaPct: number; // 环比百分比,正负
+  value: string;
+  deltaPct: number;
 };
 
 export type MonthlyRevenuePoint = {
