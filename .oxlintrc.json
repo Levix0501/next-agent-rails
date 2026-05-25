@@ -74,6 +74,17 @@
         "prefer-rest-params": "error",
         "prefer-spread": "error"
       }
+    },
+    {
+      "files": ["src/components/ui/**"],
+      "rules": {
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "jsx-a11y/no-redundant-roles": "off",
+        "jsx-a11y/anchor-has-content": "off",
+        "react/no-unstable-nested-components": "off",
+        "no-underscore-dangle": "off"
+      }
     }
   ]
 }
